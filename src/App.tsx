@@ -7,7 +7,7 @@ import ko from "antd/es/locale/ko_KR";
 import _ from "lodash";
 import Ts from "@/pages/test/Ts";
 
-// import { useAppDispatch, useAppSelector } from "./store/coreHook.ts";
+import { useAppDispatch, useAppSelector } from "@/store/coreHook";
 
 const App = () => {
   /**
@@ -17,7 +17,7 @@ const App = () => {
    */
 
   const { VITE_APP_TITLE } = import.meta.env;
-  // const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
   // const loading = useAppSelector((state) => state.loading);
   const navigate = useNavigate();
 
