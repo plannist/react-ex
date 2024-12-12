@@ -1,52 +1,80 @@
-import {Suspense} from 'react'
-import './App.css'
+import "./App.css";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import { ConfigProvider } from "antd";
 
-import {Button} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'
-// import {useNavigate, useRoutes} from "react-router-dom";
+import ko from "antd/es/locale/ko_KR";
+import _ from "lodash";
+import Ts from "@/pages/test/Ts";
 
-// @ts-ignore
-import routes from "~react-pages";
-// import { useNavigate, useRoutes } from 'react-router';
+// import { useAppDispatch, useAppSelector } from "./store/coreHook.ts";
 
+const App = () => {
+  /**
+   * =====================================================================
+   *	변수 선언부
+   * =====================================================================
+   */
 
+  const { VITE_APP_TITLE } = import.meta.env;
+  // const dispatch = useAppDispatch();
+  // const loading = useAppSelector((state) => state.loading);
+  const navigate = useNavigate();
 
+  // const { ref, width } = useResizeObserver(); //변경 여부 체크
 
-function App() {
+  /**
+   * =====================================================================
+   *	함수
+   * =====================================================================
+   */
 
-    const navigate = useNavigate();
-
-
-    const goPage = (url : string) => {
-      console.log("page 이동");
-      // useRoutes(routes)
-        navigate(url);
-
-
+  const goPage = (url: string) => {
+    if (_.isEmpty(url)) {
+      console.log("page is empty");
+      return false;
     }
+    console.log("page url is [", url, "]");
+    // useRoutes(routes)
+    navigate(url);
+  };
 
-    return (
-        <>
-            <Button onClick={()=>{goPage('/test/Ts')}} variant={"primary"}>
-                테스트페이지
-            </Button>
-            <Button onClick={()=>{goPage('/')}} variant={"primary"}>
-                메인페이지
-            </Button>
+  /**
+   * =====================================================================
+   *	Hook
+   * =====================================================================
+   */
+  useEffect(() => {
+    document.title = VITE_APP_TITLE;
+    goPage("");
+  }, []);
 
-            <Suspense fallback={<p>Loading...</p>}>
+  return (
+    <>
+      <ConfigProvider
+        theme={{
+          hashed: false,
+          token: {
+            colorPrimary: "#3579d4",
+            colorPrimaryBg: "#3579d4",
+            // fontFamily: '',
+          },
+        }}
+        locale={ko}
+      >
+        <div className="App">
+          <main>
+            <div className="content">
+              <div>
+                <Ts></Ts>
+                <p>Hi</p>
+              </div>
+            </div>
+          </main>
+        </div>
+      </ConfigProvider>
+    </>
+  );
+};
 
-
-
-                {useRoutes(routes)}
-            </Suspense>
-
-            <p className="read-the-docs">
-            Click on the Vite and React logos to learn more
-            </p>
-        </>
-    )
-}
-
-export default App
+export default App;

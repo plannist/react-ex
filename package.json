@@ -10,27 +10,41 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "antd": "^5.15.1",
+    "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
+    "redux-persist": "^6.0.0",
     "react-router": "^6.9.0",
-    "react-router-dom": "^6.9.0"
+    "react-router-dom": "^6.9.0",
+    "@reduxjs/toolkit": "^1.8.5"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.13",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
-    "eslint": "^8.57.0",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "prettier": "^2.8.1",
     "typescript": "^5.2.2",
+    "unplugin-auto-import": "^0.15.1",
     "vite": "^5.2.0",
     "vite-plugin-pages": "^0.32.1",
     "vite-plugin-svgr": "^4.2.0",
-    "unplugin-auto-import": "^0.15.1"
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-tsconfig-paths": "^3.6.0"
   }
 }

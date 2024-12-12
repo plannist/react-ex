@@ -6,6 +6,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    "prettier",
     "./.eslintrc-auto.json",
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
@@ -30,9 +31,10 @@ module.exports = {
     "react/display-name": "off",
     "react/react-in-jsx-scope": "off" /* import React from 'react' 모든 페이지에 적는거 방지 */,
     "react-hooks/exhaustive-deps": "off",
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
+    // 'react-refresh/only-export-components': [
+    //   'warn',
+    //   { allowConstantExport: true },
+    // ],
+    'react-refresh/only-export-components': "off"
   },
 }
