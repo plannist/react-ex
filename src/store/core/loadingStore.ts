@@ -11,7 +11,7 @@
  */
 
 // Store
-import store from "../coreStore.ts";
+import store from "@/store/coreStore";
 
 // Libs
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";

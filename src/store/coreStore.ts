@@ -19,7 +19,7 @@ import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
 // Store
-import loadingReducer from "./core/loadingStore";
+import loadingReducer from "@/store/core/loadingStore";
 // Reducer 명은 유니크 해야 한다.
 const rootReducer = combineReducers({
   // menu: menuReducer,
@@ -62,6 +62,7 @@ const store = configureStore({
  * @returns {object} store object
  */
 export function setupStore(preloadedState?: PreloadedState<RootState>) {
+  console.log("setupStore : ", preloadedState);
   return configureStore({
     reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>

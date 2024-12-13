@@ -1,0 +1,66 @@
+// ck editor
+.ck {
+	&.ck-editor {
+		max-width: 100%;
+
+		// 에디터 작성 영역
+		// .ck-editor__editable {
+		.ck-content {
+			height: 300px;
+		}
+
+		th,
+		td {
+			line-height: normal;
+		}
+
+		color: #111;
+	}
+
+	&.ck-balloon-panel {
+		z-index: var(--ck-balloon-z-index) !important;
+	}
+}
+
+.ck-dropdown__panel, // 도구모음 드롭다운 메뉴
+.editor-preview {
+	overflow-y: auto;
+	max-height: 300px;
+}
+
+.editor-viewer-full {
+	.editor-preview {
+		height: auto;
+		max-height: none;
+	}
+}
+
+.ck-content {
+	overflow-y: auto;
+	word-break: break-word;
+
+	ol,
+	ul {
+		padding-left: 40px;
+	}
+
+	.image-style-side {
+		max-width: 50%;
+		float: right;
+		margin-left: var(--ck-image-style-spacing);
+
+		.image.image_resized {
+			max-width: 100%;
+			display: block;
+			box-sizing: border-box;
+
+			img {
+				width: 100%;
+			}
+
+			> figcaption {
+				display: block;
+			}
+		}
+	}
+}

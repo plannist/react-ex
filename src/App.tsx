@@ -1,13 +1,22 @@
-import "./App.css";
+// import "./App.css";
+
+import ReactDOM from "react-dom"; // React 17
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import { ConfigProvider } from "antd";
+import { Button, ConfigProvider } from "antd";
 
 import ko from "antd/es/locale/ko_KR";
 import _ from "lodash";
-import Ts from "@/pages/test/Ts";
+
+//style
+import "@/assets/sass/style.scss";
 
 import { useAppDispatch, useAppSelector } from "@/store/coreHook";
+import Loading from "@/component/core/Loading";
+import Layout from "@/routs/Layout";
+import { useResizeObserver } from "@/hooks/useResizeObserver";
+import { useEffect } from "react";
+import Header from "@/routs/Header";
 
 const App = () => {
   /**
@@ -17,27 +26,17 @@ const App = () => {
    */
 
   const { VITE_APP_TITLE } = import.meta.env;
-  const dispatch = useAppDispatch();
-  // const loading = useAppSelector((state) => state.loading);
-  const navigate = useNavigate();
 
-  // const { ref, width } = useResizeObserver(); //변경 여부 체크
+  const loading = useAppSelector((state) => state.loading);
+
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   /**
    * =====================================================================
    *	함수
    * =====================================================================
    */
-
-  const goPage = (url: string) => {
-    if (_.isEmpty(url)) {
-      console.log("page is empty");
-      return false;
-    }
-    console.log("page url is [", url, "]");
-    // useRoutes(routes)
-    navigate(url);
-  };
 
   /**
    * =====================================================================
@@ -46,7 +45,6 @@ const App = () => {
    */
   useEffect(() => {
     document.title = VITE_APP_TITLE;
-    goPage("");
   }, []);
 
   return (
@@ -63,14 +61,8 @@ const App = () => {
         locale={ko}
       >
         <div className="App">
-          <main>
-            <div className="content">
-              <div>
-                <Ts></Ts>
-                <p>Hi</p>
-              </div>
-            </div>
-          </main>
+          <Layout />
+          <Loading />
         </div>
       </ConfigProvider>
     </>

@@ -1,0 +1,96 @@
+/* 영업마케팅 화면 스타일 */
+
+// 타겟팅 컬러 리스트
+.color-selected-info {
+	position: relative;
+	.ant-form-item .ant-input-outlined {
+		padding-left: 28px;
+	}
+	.color-box {
+		position: absolute;
+		top: 4px;
+		left: 4px;
+		width: 20px;
+		height: 20px;
+		border-radius: 4px;
+		z-index: 1;
+	}
+}
+.color-chip-list {
+	display: flex;
+	gap: 2px;
+	flex-wrap: wrap;
+	max-width: calc(100% - 162px);
+	.color-chip {
+		width: 28px;
+	}
+}
+
+// 템플릿등록 - 템플릿 미리보기
+.template-preview {
+	background-position: left top;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	.template-group-top {
+		position: relative;
+		.template-logo {
+			position: relative;
+			width: 100%;
+			> * {
+				position: absolute;
+			}
+		}
+		.template-img-gift {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			img {
+				position: relative;
+			}
+		}
+	}
+	.template-bg {
+		position: static;
+	}
+	.template-img-barcode {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		margin-top: 10px;
+	}
+	.template-gift {
+		background-image: url(../img/temp/ex_gift_bg.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 18px 0;
+	}
+	.template-text {
+		position: relative;
+		line-height: 1.4;
+	}
+	.template-img-banner {
+		position: relative;
+		padding-top: 24px;
+	}
+	*:hover .handler-img-size {
+		opacity: 1;
+		transition: 0.4s opacity;
+	}
+}
+
+.handler-img-size {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 12px;
+	height: 12px;
+	border-radius: 2px;
+	overflow: hidden;
+	background-image: url(../img/icon/icon-handler-size.svg);
+	background-repeat: no-repeat;
+	background-color: #111;
+	opacity: 0;
+}

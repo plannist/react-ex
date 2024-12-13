@@ -1,0 +1,152 @@
+/* 인사 화면 스타일 */
+
+.commute-section {
+	display: flex;
+	align-items: center;
+	height: calc(100vh - 168px);
+	min-height: 500px;
+
+	@at-root {
+		.view-top-bar {
+			.commute-section {
+				height: calc(100vh - 228px);
+			}
+		}
+	}
+
+	.commute-wrap {
+		width: 400px;
+		margin: 0 auto;
+		padding-bottom: 100px;
+
+		&::before {
+			content: '';
+			display: block;
+			height: 97px;
+			background: url(../img/img/img-commute.png);
+			margin-bottom: 40px;
+		}
+	}
+
+	.ant-form-item {
+		margin-bottom: 16px;
+		.ant-form-item-label > label {
+			width: auto;
+			margin-right: 4px;
+			line-height: 36px;
+		}
+
+		.ant-input-outlined {
+			height: 48px;
+		}
+	}
+
+	.btn-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	.ant-btn {
+		flex: 1 1 40%;
+		width: 100%;
+		height: 52px;
+		font-size: 16px;
+		font-weight: var(--font-semi-bold);
+	}
+}
+
+.step-schedule {
+	.tbl-list {
+		thead {
+			.day {
+				display: inline-flex;
+				align-items: center;
+				span + strong {
+					display: inline-flex;
+					align-items: center;
+					&::before {
+						content: '';
+						display: inline-block;
+						width: 1px;
+						height: 16px;
+						margin: 0 8px;
+						background-color: var(--tbl-line-color);
+					}
+				}
+			}
+		}
+
+		tbody {
+			td {
+				padding: 4px 6px;
+				&:not(.sticky) {
+					vertical-align: top;
+				}
+			}
+		}
+	}
+
+	.cell-box {
+		height: 24px;
+		background-color: var(--status-gray);
+		border-radius: 4px;
+		text-align: center;
+		line-height: 24px;
+		color: #8c8c8c;
+
+		& + .cell-box {
+			margin-top: 4px;
+		}
+
+		.cell {
+			justify-content: center;
+		}
+	}
+
+	.cell {
+		display: flex;
+		align-items: center;
+		height: 24px;
+		padding: 0 10px;
+		border-radius: 4px;
+		line-height: 24px;
+		font-size: 12px;
+		color: #fff;
+		cursor: pointer;
+
+		span {
+			display: inline-flex;
+			align-items: center;
+			& + span {
+				&::before {
+					content: '';
+					display: inline-block;
+					width: 1px;
+					height: 12px;
+					margin: 0 12px;
+					background-color: rgba(256, 256, 256, 0.6);
+				}
+			}
+		}
+
+		&.yellow {
+			background-color: var(--status-yellow);
+		}
+		&.red {
+			background-color: var(--status-red);
+		}
+		&.green {
+			background-color: var(--status-green);
+		}
+		&.blue {
+			background-color: var(--status-blue);
+		}
+		&.gray {
+			background-color: var(--status-gray);
+		}
+		&.pink {
+			background-color: var(--status-pink);
+		}
+	}
+}

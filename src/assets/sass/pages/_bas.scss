@@ -1,0 +1,30 @@
+.grid-list {
+	div {
+		//width: 100%;
+		&[data-props='row-single'] {
+			height: 350px !important;
+			//	border: 4px solid #ff0000;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.grid-trm-dv {
+	div {
+		&[data-props='row-single'] {
+			height: 250px !important;
+			//border: 4px solid #ff0000;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.grid-trm-tab {
+	div {
+		&[data-props='row-single'] {
+			height: 200px !important;
+			//		border: 4px solid #ff0000;
+			margin-bottom: 30px;
+		}
+	}
+}

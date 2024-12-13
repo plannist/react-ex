@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@import 'helpers/functions', 'helpers/variables', 'helpers/mixins'; //helpers
+@import 'base/fonts', 'base/reset'; // base
+@import 'components/button', 'components/editor', 'components/form', 'components/table', 'components/auigrid',
+	'components/auipivot', 'components/pagination'; //components
+@import 'layout/layout', 'layout/popup', 'layout/login'; // layout
+@import 'layout/common'; // common
+@import 'pages/scs', 'pages/som', 'pages/prd', 'pages/cus', 'pages/smk', 'pages/hrm', 'pages/sbz', "pages/bas"; // 화면
+
+//custom
+@import 'etc/etc', 'etc/component_example'; //예전 fp
+
+@import 'layout/darkmode'; // 다크모드
+@import 'layout/print'; // 프린트

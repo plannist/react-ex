@@ -1,0 +1,776 @@
+:root {
+	--fp-color-text-default: #1a1a1a;
+	--fp-color-text-deepgrey: #333;
+	--fp-color-darkgrey: #999;
+	--fp-icon-fill-grey: #9a9a9a;
+	--fp-color-grey: #ccc;
+	--fp-color-border-grey: #d9d9d9;
+	--fp-color-secondary: #f9c310;
+	--fp-color-warning: #da1e28;
+	--fp-color-white: #fff;
+	--fp-color-light-grey: #f5f5f5;
+	--fp-color-table-light-grey: #f9fafb;
+	--fp-color-table-border-grey: #f0f0f3;
+	--fp-icon-color: #454545;
+	--fp-icon-stroke-color: var(--icon-color);
+	--fp-font-xxxxsmall: 11px;
+	--fp-font-xxxsmall: 12px;
+	--fp-font-xxsmall: 14px;
+	--fp-font-xsmall: 16px;
+	--fp-font-small: 18px;
+	--fp-font-medium: 20px;
+	--fp-font-large: 26px;
+	--fp-font-xlarge: 30px;
+	--fp-font-xxlarge: 36px;
+	--fp-aside-off-width: 80px;
+	--fp-aside-on-width: 240px;
+	--fp-login-width: 764px;
+	--fp-login-width: 512px;
+
+	/* cos style */
+	// ck editor
+	--ck-balloon-z-index: 2000;
+
+	// font
+	--font-family: 'Pretendard', 'Malgun Gothic', '맑은 고딕', AppleSDGothicNeo-Light, sans-serif;
+	--font-size: 14px;
+	--font-normal: 400;
+	--font-medium: 500;
+	--font-semi-bold: 600;
+	--font-bold: 700;
+
+	// button
+	--btn-color: rgba(17, 17, 17, 0.8);
+	--btn02-color: rgba(17, 17, 17, 0.6);
+	--btn-line-color: #d9d9d9;
+	--btn-bg-color: #fff;
+	--btn-hover-bg: #f9fafb;
+	--btn-disabled-color: #d9d9d9;
+	--btn-disabled-line-color: #d9d9d9;
+
+	--btn-primary-hover-color: #095ccc;
+	--btn-primary-disabled-color: #a4cbff;
+	--btn-primary-disabled-font-color: #fff;
+	--btn-primary-line-disabled-color: #a4cbff;
+	--btn-primary-line-hover-color: #f1f5fc;
+	--btn-gray-color: #d9d9d9;
+
+	--btn-danger-color: #ff2d55;
+	--btn-danger-line-hover: #fff1f3;
+	--btn-danger-disabled-color: #ffb8c5;
+
+	--btn-success-color: #34c759;
+	--btn-success-hover-color: #00ba2f;
+	--btn-success-disable-color: #b8f8be;
+
+	--btn-phone-bg: #f6f6f6;
+
+	--radius: 4px;
+
+	// form
+	--line-color: #ddd;
+
+	--form-bg-color: #fff;
+	--disabled-color: #a7a7a7;
+	--disabled-bg: #eaeaea;
+
+	--bg-chk: #fff;
+	--bg-chk-url: url("data:image/svg+xml,%0A%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Crect fill='%233579d4' x='1' y='1' width='18' height='18' rx='2'/%3E%3Cpath d='M13.798 6.225 8.57 12.036 6.257 9.465a.676.676 0 0 0-1.038 0 .87.87 0 0 0 0 1.154l2.823 3.138a.686.686 0 0 0 .51.243.658.658 0 0 0 .51-.243l5.72-6.357a.87.87 0 0 0 0-1.154c-.237-.324-.711-.324-.984-.02z' fill='%23ffffff' fill-rule='nonzero'/%3E%3C/g%3E%3C/svg%3E%0A");
+	--line-chk: #d9d9d9;
+	--checked-chk: #fff;
+	--disabled-bg-chk: #eaeaea;
+	--disabled-deep-chk: #bcbcbc;
+
+	--placehoder-color: #cfcfcf;
+
+	--sap-line-color: #a3d6f1;
+	--sap-disabled-bg: #f8fcff;
+
+	--select-list-hover: rgba(0, 0, 0, 0.04);
+
+	// color
+	--base-color: #111;
+	--base02-color: rgba(17, 17, 17, 0.2);
+	--base03-color: rgba(17, 17, 17, 0.3);
+	--base04-color: rgba(17, 17, 17, 0.4);
+	--point-color: #3579d4;
+
+	--bg-color: #fff;
+	--bg-search-form: #f7f7f9;
+	--popup-bg-color: var(--bg-color);
+	--popup-border-color: var(--popup-bg-color);
+	--layout-line-color: #e6e6e6;
+
+	--blue-color: #0043ce;
+	--red-color: #da1e28;
+	--req-color: #ed3124;
+	--gray-color: #8c8c8c;
+
+	--tbl-th-bg: #f9fafb;
+	--tbl-line-color: #dadada;
+	--tbl-line-top-color: #111;
+
+	--main-tab-bg: #f8f9fa;
+	--main-tab-line: #eaecf0;
+	--main-tab-item-color: rgba(0, 0, 0, 0.3);
+	--main-tab-item-divide-color: #e1e2e3;
+	--main-tab-btn-color: #111;
+
+	--scrollbar-thumb-color: rgba(17, 17, 17, 0.1);
+
+	--status-red: #ff4d4f;
+	--status-yellow: #faad14;
+	--status-green: #52c41a;
+	--status-blue: #00a0eb;
+	--status-gray: #d9d9d9;
+	--status-pink: #ff69b4;
+
+	--aside-menu-color: #666;
+	--aside-menu-arr: #111;
+	--aside-menu-hover: #f8f8f8;
+
+	--attach-line-color: #ddd;
+
+	--datepicker-cell-color: #c6c6c6;
+	--datepicker-hover-bg: #f6f6f6;
+	--datepicker-in-range-bg: #f1f5fc;
+	--datepicker-today-bg: #f1f5fc;
+	--datepicker-today-color: var(--point-color);
+	--datepicker-shadow: 0 12px 16px rgba(16, 24, 40, 0.08);
+	--datepicker-panel-line: #f0f0f3;
+
+	--progress: #e8f2ff;
+	--progress-line: var(--line-color);
+
+	--badge-blue-bg: #ddf0ff;
+	--badge-blue-color: #175cd3;
+	--badge-red-bg: #ffefef;
+	--badge-red-color: #d92d20;
+
+	// grid
+	// --grid-bg-false: #eaeaea;
+	--grid-bg-false: #f1f1f1;
+	--grid-bg-red: #fff3f3;
+	--grid-bg-red-selection: #ffccd5;
+	--grid-bg-yellow: #fffde5;
+	--grid-bg-yellow-selection: #fff3b2;
+	--grid-bg-total: #f8f8f8;
+	--grid-bg-selection: #e0f0ff;
+	--grid-bg-gray: #ddd;
+	--grid-bg-blue: var(--grid-bg-selection);
+	--grid-bg-light-gray: #f9fafb;
+
+	--grid-bg-deep-red: var(--status-red);
+	--grid-bg-deep-yellow: var(--status-yellow);
+	--grid-bg-deep-green: var(--status-green);
+	--grid-bg-deep-blue: var(--status-blue);
+
+	--grid-fixed-rule: #ccc;
+
+	// schedule
+	--schedule-bg-gray: #efefef;
+	--schedule-bg-yellow: #fffde8;
+	--schedule-bg-green: #eafff0;
+	--schedule-bg-purple: #fdf4ff;
+	--schedule-bg-red: #fff3f3;
+	--schedule-bg-blue: #edf6ff;
+	--schedule-bg-disabled: #ddd;
+
+	--schedule-color-gray: #888;
+	--schedule-color-yellow: #ff961b;
+	--schedule-color-green: #00ba34;
+	--schedule-color-purple: #7932d4;
+	--schedule-color-red: #e92c2c;
+	--schedule-color-blue: #0085ff;
+
+	// 이미지
+	--icon-select-arr: url(../img/icon/icon-select-arr.svg);
+	--icon-select-disabled: url(../img/icon/icon-select-disabled.svg);
+	--icon-down: url(../img/icon/icon-down.svg);
+	--icon-calendar: url(../img/icon/icon-calendar.svg);
+	--icon-calendar-disabled: url(../img/icon/icon-calendar-disabled.svg);
+	--icon-clock: url(../img/icon/icon-clock.svg);
+	--icon-clock-disabled: url(../img/icon/icon-clock-disabled.svg);
+	--icon-search: url(../img/icon/icon-search.svg);
+	--icon-search-disabled: url(../img/icon/icon-search-disabled.svg);
+	--icon-search-png: url(../img/icon/icon-search.png);
+	--icon-close-tab: url(../img/icon/icon-close-tab.svg);
+	--icon-searchform-arr: url(../img/icon/icon-searchform-arr.svg);
+	--icon-file-cloud: url(../img/icon/icon-file-cloud.svg);
+	--icon-path-arr: url(../img/icon/icon-path-arr.svg);
+	--ico-chk-small: url(../img/icon/ico-chk-small.png);
+	--icon-file-clip: url(../img/icon/icon-file-clip.svg);
+
+	--icon-top-search: url(../img/icon/icon-top-search.svg);
+	--icon-top-new: url(../img/icon/icon-top-new.svg);
+	--icon-top-save: url(../img/icon/icon-top-save.svg);
+	--icon-top-down: url(../img/icon/icon-top-down.svg);
+	--icon-top-search-disabled: url(../img/icon/icon-top-search-disabled.svg);
+	--icon-top-new-disabled: url(../img/icon/icon-top-new-disabled.svg);
+	--icon-top-save-disabled: url(../img/icon/icon-top-save-disabled.svg);
+	--icon-top-down-disabled: url(../img/icon/icon-top-down-disabled.svg);
+
+	--icon-del: url(../img/icon/icon-del.svg);
+	--icon-download: url(../img/icon/icon-download.svg);
+	--icon-upload: url(../img/icon/icon-upload.svg);
+
+	--icon-tree-arrow: url(../img/icon/icon-tree-arrow.svg);
+	--icon-tree-branch: url(../img/icon/icon-tree-branch.svg);
+	--icon-tree-branch-open: url(../img/icon/icon-tree-branch-open.svg);
+	--icon-tree-branch-on: url(../img/icon/icon-tree-branch-on.svg);
+	--icon-tree-branch-open-on: url(../img/icon/icon-tree-branch-open-on.svg);
+	--icon-plus-outlined: url(../img/icon/icon-plus-outlined.svg);
+	--icon-minus-outlined: url(../img/icon/icon-minus-outlined.svg);
+
+	--icon-modal-alert: url(../img/icon/icon-modal-alert.svg);
+	--icon-modal-warning: url(../img/icon/icon-modal-warning.svg);
+	--icon-error-page: url(../img/icon/icon-error-page.svg);
+
+	--icon-grid-add: url(../img/icon/icon-grid-add.png);
+	--icon-grid-delete: url(../img/icon/icon-grid-delete.png);
+	--icon-grid-arrow: url(../img/icon/icon-grid-arrow.png);
+	--icon-grid-modify: url(../img/icon/icon-grid-modify.png);
+	--icon-grid-a-modify: url(../img/icon/icon-grid-a-modify.png);
+
+	--btn-edit: url(../img/btn/btn-edit.png);
+	--btn-calendar-super-prev: url(../img/btn/btn-calendar-super-prev.svg);
+	--btn-calendar-prev: url(../img/btn/btn-calendar-prev.svg);
+	--btn-calendar-next: url(../img/btn/btn-calendar-next.svg);
+	--btn-calendar-super-next: url(../img/btn/btn-calendar-super-next.svg);
+	--btn-step-up: url(../img/btn/btn-step-up.svg);
+	--btn-step-down: url(../img/btn/btn-step-down.svg);
+	--btn-more: url(../img/btn/btn-more.svg);
+
+	--main-tab-btn-pin: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.7303 3.77125L8.22896 0.270441C8.14324 0.184702 8.04147 0.116689 7.92947 0.070286C7.81746 0.0238833 7.69741 0 7.57617 0C7.45493 0 7.33488 0.0238833 7.22287 0.070286C7.11086 0.116689 7.00909 0.184702 6.92337 0.270441L3.8293 3.37432C3.21429 3.18163 1.81004 2.94913 0.34464 4.13241C0.243635 4.21363 0.160865 4.31521 0.101719 4.43054C0.0425724 4.54586 0.00837597 4.67235 0.00135529 4.80177C-0.00566538 4.93119 0.014647 5.06064 0.0609702 5.18169C0.107293 5.30274 0.178589 5.41268 0.270216 5.50435L2.94025 8.17322L0.596759 10.7504C0.510154 10.837 0.461501 10.9544 0.461501 11.0769C0.461501 11.1994 0.510154 11.3169 0.596759 11.4035C0.683363 11.4901 0.800824 11.5387 0.923301 11.5387C1.04578 11.5387 1.16324 11.4901 1.24984 11.4035L3.76702 9L6.49529 11.7283C6.58094 11.8143 6.68271 11.8825 6.79477 11.9292C6.90684 11.9758 7.027 11.9999 7.14837 12C7.1703 12 7.19164 12 7.21357 12C7.34515 11.9909 7.47323 11.9535 7.58911 11.8905C7.70499 11.8275 7.80594 11.7403 7.88511 11.6348C9.0182 10.129 8.90916 8.90477 8.64608 8.17322L11.7309 5.07684C11.8166 4.99109 11.8846 4.88929 11.9309 4.77726C11.9773 4.66523 12.0011 4.54517 12.0011 4.42393C12.001 4.30269 11.9771 4.18265 11.9306 4.07066C11.8842 3.95867 11.8161 3.85693 11.7303 3.77125ZM11.0773 4.42434L7.77319 7.73937C7.70495 7.80786 7.65995 7.89605 7.64453 7.99149C7.6291 8.08693 7.64404 8.18481 7.68723 8.2713C8.233 9.36343 7.58338 10.4977 7.14837 11.0763L0.923301 4.85069C1.62023 4.28876 2.28716 4.14049 2.79717 4.14049C3.12078 4.13607 3.44173 4.19955 3.7393 4.32683C3.82611 4.37028 3.92441 4.38525 4.02022 4.36961C4.11603 4.35397 4.20447 4.30852 4.27296 4.23972L7.57646 0.922948L11.0773 4.42434Z' fill='%23111111'/%3E%3C/svg%3E%0A");
+	--main-tab-btn-close: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 1L1 9M1 1L9 9' stroke='%23111111' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	--aside-search-box-btn-fav: url("data:image/svg+xml,%3Csvg width='12' height='13' viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.54739 1.14084C5.72735 0.757465 6.27265 0.757464 6.45261 1.14084L7.4839 3.33776C7.69625 3.79012 8.11994 4.10703 8.61386 4.18295L11.0018 4.54996C11.4039 4.61176 11.5678 5.10236 11.2836 5.39346L9.49498 7.22529C9.16225 7.56607 9.01113 8.04461 9.0878 8.51467L9.50095 11.0477C9.56815 11.4596 9.13079 11.7677 8.76551 11.5657L6.72589 10.4378C6.27419 10.1881 5.72581 10.1881 5.27412 10.4378L3.23449 11.5657C2.86921 11.7677 2.43185 11.4596 2.49905 11.0477L2.9122 8.51467C2.98887 8.04461 2.83775 7.56606 2.50502 7.22529L0.716447 5.39346C0.43222 5.10236 0.596118 4.61176 0.998242 4.54996L3.38614 4.18295C3.88007 4.10703 4.30375 3.79012 4.5161 3.33776L5.54739 1.14084Z' stroke='%23111111' stroke-opacity='0.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	--aside-search-box-menu-item: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 9L3 3M3 3V7.8M3 3H7.8' stroke='%23111111' stroke-opacity='0.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+body.dark-mode {
+	// button
+	--btn-color: rgba(256, 256, 256, 0.8);
+	--btn02-color: rgba(256, 256, 256, 0.6);
+	--btn-line-color: #767676;
+	--btn-bg-color: transparent;
+	--btn-hover-bg: #3d3d3d;
+	--btn-disabled-color: #3c3c3c;
+	--btn-disabled-line-color: #3c3c3c;
+
+	--btn-primary-disabled-color: #0d2c56;
+	--btn-primary-disabled-font-color: rgba(256, 256, 256, 0.2);
+	--btn-primary-line-disabled-color: #234471;
+	--btn-primary-line-hover-color: #00224e;
+	--btn-danger-line-hover: #42020e;
+	--btn-danger-disabled-color: #76041a;
+	--btn-gray-color: #3d3d3d;
+
+	--btn-phone-bg: #333;
+
+	// form
+	--line-color: #767676;
+	--form-bg-color: transparent;
+	--placehoder-color: rgba(256, 256, 256, 0.4);
+	--disabled-bg: #373737;
+
+	--bg-chk: transparent;
+	--bg-chk-url: url("data:image/svg+xml,%0A%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Crect fill='%233579d4' x='1' y='1' width='18' height='18' rx='2'/%3E%3Cpath d='M13.798 6.225 8.57 12.036 6.257 9.465a.676.676 0 0 0-1.038 0 .87.87 0 0 0 0 1.154l2.823 3.138a.686.686 0 0 0 .51.243.658.658 0 0 0 .51-.243l5.72-6.357a.87.87 0 0 0 0-1.154c-.237-.324-.711-.324-.984-.02z' fill='%23111111' fill-rule='nonzero'/%3E%3C/g%3E%3C/svg%3E%0A");
+	--checked-chk: #111;
+	--disabled-deep-chk: #999;
+
+	--sap-line-color: #00429a;
+	--sap-disabled-bg: #09254b;
+
+	--select-list-hover: rgba(256, 256, 256, 0.04);
+
+	// color
+	--base-color: #fff;
+	--base02-color: rgba(256, 256, 256, 0.4);
+	--base03-color: rgba(256, 256, 256, 0.5);
+	--base04-color: rgba(256, 256, 256, 0.6);
+
+	--bg-color: #111;
+	--bg-search-form: #262728;
+	--popup-bg-color: #1c1c1c;
+	--popup-border-color: #161616;
+	--layout-line-color: #2c2c2c;
+
+	--blue-color: #0043ce;
+	--red-color: #da1e28;
+	--req-color: #ed3124;
+	--gray-color: #8c8c8c;
+
+	--tbl-th-bg: #2d2d2e;
+	--tbl-line-color: #56585c;
+	--tbl-line-top-color: #efefef;
+
+	--main-tab-bg: #292a2b;
+	--main-tab-line: #2e3032;
+	--main-tab-item-color: rgba(256, 256, 256, 0.3);
+	--main-tab-item-divide-color: #3e3f40;
+	--main-tab-home-color: #fff;
+	--main-tab-btn-color: #fff;
+
+	--scrollbar-thumb-color: rgba(256, 256, 256, 0.3);
+
+	--aside-menu-color: #acacac;
+	--aside-menu-hover: #2d2d2e;
+
+	--attach-line-color: #767676;
+
+	--datepicker-cell-color: #666;
+	--datepicker-hover-bg: #333;
+	--datepicker-in-range-bg: #e5efff;
+	--datepicker-today-bg: #60cdff;
+	--datepicker-today-color: #fff;
+	--datepicker-panel-line: #2e2e2e;
+
+	--progress-bg: #4d4d4d;
+	--progress: #264266;
+	--progress-line: #4e4e4e;
+
+	--badge-blue-bg: #132f5e;
+	--badge-blue-color: #60cdff;
+	--badge-red-bg: #582323;
+	--badge-red-color: #ff808d;
+
+	// grid
+	--grid-bg-false: #333;
+	--grid-bg-red: #442726;
+	--grid-bg-red-selection: #650400;
+	--grid-bg-yellow: #433519;
+	--grid-bg-yellow-selection: #625200;
+	--grid-bg-total: #2b2b2b;
+	--grid-bg-selection: #1b2d3d;
+	--grid-bg-gray: #3d3d3d;
+	--grid-bg-blue: var(--grid-bg-selection);
+	--grid-bg-light-gray: #2b2b2b;
+
+	--grid-bg-deep-red: #821c1d;
+	--grid-bg-deep-yellow: #8e5f00;
+	--grid-bg-deep-green: #2a7e00;
+	--grid-bg-deep-blue: #005d88;
+
+	// 이미지
+	--icon-select-arr: url(../img/icon/icon-select-arr-w.svg);
+	--icon-select-disabled: url(../img/icon/icon-select-disabled-w.svg);
+	--icon-down: url(../img/icon/icon-down-w.svg);
+	--icon-calendar: url(../img/icon/icon-calendar-w.svg);
+	--icon-calendar-disabled: url(../img/icon/icon-calendar-disabled-w.svg);
+	--icon-clock: url(../img/icon/icon-clock-w.svg);
+	--icon-clock-disabled: url(../img/icon/icon-clock-disabled-w.svg);
+	--icon-search: url(../img/icon/icon-search-w.svg);
+	--icon-search-png: url(../img/icon/icon-search-w.png);
+	--icon-close-tab: url(../img/icon/icon-close-tab-w.svg);
+	--icon-searchform-arr: url(../img/icon/icon-searchform-arr-w.svg);
+	--icon-file-cloud: url(../img/icon/icon-file-cloud-w.svg);
+	--icon-path-arr: url(../img/icon/icon-path-arr-w.svg);
+	--ico-chk-small: url(../img/icon/ico-chk-small-w.png);
+	--icon-file-clip: url(../img/icon/icon-file-clip-w.svg);
+
+	--icon-top-search-disabled: url(../img/icon/icon-top-search-disabled-w.svg);
+	--icon-top-new-disabled: url(../img/icon/icon-top-new-disabled-w.svg);
+	--icon-top-save-disabled: url(../img/icon/icon-top-save-disabled-w.svg);
+	--icon-top-down-disabled: url(../img/icon/icon-top-down-disabled-w.svg);
+
+	--icon-del: url(../img/icon/icon-del-w.svg);
+	--icon-download: url(../img/icon/icon-download-wh.svg);
+	--icon-upload: url(../img/icon/icon-upload-w.svg);
+
+	--icon-tree-arrow: url(../img/icon/icon-tree-arrow-w.svg);
+	--icon-tree-branch: url(../img/icon/icon-tree-branch-w.svg);
+	--icon-tree-branch-open: url(../img/icon/icon-tree-branch-open-w.svg);
+	// --icon-tree-branch-on: url(../img/icon/icon-tree-branch-on-w.svg);
+	// --icon-tree-branch-open-on: url(../img/icon/icon-tree-branch-open-on-w.svg);
+	--icon-plus-outlined: url(../img/icon/icon-plus-outlined-w.svg);
+	--icon-minus-outlined: url(../img/icon/icon-minus-outlined-w.svg);
+
+	--icon-modal-alert: url(../img/icon/icon-modal-alert-w.svg);
+	--icon-modal-warning: url(../img/icon/icon-modal-warning-w.svg);
+	--icon-error-page: url(../img/icon/icon-error-page-w.svg);
+
+	--icon-grid-arrow: url(../img/icon/icon-grid-arrow-w.png);
+	--icon-grid-modify: url(../img/icon/icon-grid-modify-w.png);
+	--icon-grid-a-modify: url(../img/icon/icon-grid-a-modify-w.png);
+
+	--btn-edit: url(../img/btn/btn-edit-w.png);
+	--btn-calendar-super-prev: url(../img/btn/btn-calendar-super-prev-w.svg);
+	--btn-calendar-prev: url(../img/btn/btn-calendar-prev-w.svg);
+	--btn-calendar-next: url(../img/btn/btn-calendar-next-w.svg);
+	--btn-calendar-super-next: url(../img/btn/btn-calendar-super-next-w.svg);
+	--btn-step-up: url(../img/btn/btn-step-up-w.svg);
+	--btn-step-down: url(../img/btn/btn-step-down-w.svg);
+	--btn-more: url(../img/btn/btn-more-w.svg);
+
+	--main-tab-btn-pin: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.7303 3.77125L8.22896 0.270441C8.14324 0.184702 8.04147 0.116689 7.92947 0.070286C7.81746 0.0238833 7.69741 0 7.57617 0C7.45493 0 7.33488 0.0238833 7.22287 0.070286C7.11086 0.116689 7.00909 0.184702 6.92337 0.270441L3.8293 3.37432C3.21429 3.18163 1.81004 2.94913 0.34464 4.13241C0.243635 4.21363 0.160865 4.31521 0.101719 4.43054C0.0425724 4.54586 0.00837597 4.67235 0.00135529 4.80177C-0.00566538 4.93119 0.014647 5.06064 0.0609702 5.18169C0.107293 5.30274 0.178589 5.41268 0.270216 5.50435L2.94025 8.17322L0.596759 10.7504C0.510154 10.837 0.461501 10.9544 0.461501 11.0769C0.461501 11.1994 0.510154 11.3169 0.596759 11.4035C0.683363 11.4901 0.800824 11.5387 0.923301 11.5387C1.04578 11.5387 1.16324 11.4901 1.24984 11.4035L3.76702 9L6.49529 11.7283C6.58094 11.8143 6.68271 11.8825 6.79477 11.9292C6.90684 11.9758 7.027 11.9999 7.14837 12C7.1703 12 7.19164 12 7.21357 12C7.34515 11.9909 7.47323 11.9535 7.58911 11.8905C7.70499 11.8275 7.80594 11.7403 7.88511 11.6348C9.0182 10.129 8.90916 8.90477 8.64608 8.17322L11.7309 5.07684C11.8166 4.99109 11.8846 4.88929 11.9309 4.77726C11.9773 4.66523 12.0011 4.54517 12.0011 4.42393C12.001 4.30269 11.9771 4.18265 11.9306 4.07066C11.8842 3.95867 11.8161 3.85693 11.7303 3.77125ZM11.0773 4.42434L7.77319 7.73937C7.70495 7.80786 7.65995 7.89605 7.64453 7.99149C7.6291 8.08693 7.64404 8.18481 7.68723 8.2713C8.233 9.36343 7.58338 10.4977 7.14837 11.0763L0.923301 4.85069C1.62023 4.28876 2.28716 4.14049 2.79717 4.14049C3.12078 4.13607 3.44173 4.19955 3.7393 4.32683C3.82611 4.37028 3.92441 4.38525 4.02022 4.36961C4.11603 4.35397 4.20447 4.30852 4.27296 4.23972L7.57646 0.922948L11.0773 4.42434Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+	--main-tab-btn-close: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 1L1 9M1 1L9 9' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	--aside-search-box-btn-fav: url("data:image/svg+xml,%3Csvg width='12' height='13' viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.54739 1.14084C5.72735 0.757465 6.27265 0.757464 6.45261 1.14084L7.4839 3.33776C7.69625 3.79012 8.11994 4.10703 8.61386 4.18295L11.0018 4.54996C11.4039 4.61176 11.5678 5.10236 11.2836 5.39346L9.49498 7.22529C9.16225 7.56607 9.01113 8.04461 9.0878 8.51467L9.50095 11.0477C9.56815 11.4596 9.13079 11.7677 8.76551 11.5657L6.72589 10.4378C6.27419 10.1881 5.72581 10.1881 5.27412 10.4378L3.23449 11.5657C2.86921 11.7677 2.43185 11.4596 2.49905 11.0477L2.9122 8.51467C2.98887 8.04461 2.83775 7.56606 2.50502 7.22529L0.716447 5.39346C0.43222 5.10236 0.596118 4.61176 0.998242 4.54996L3.38614 4.18295C3.88007 4.10703 4.30375 3.79012 4.5161 3.33776L5.54739 1.14084Z' stroke='%23ffffff' stroke-opacity='0.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	--aside-search-box-menu-item: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 9L3 3M3 3V7.8M3 3H7.8' stroke='%23ffffff' stroke-opacity='0.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+// size
+$min-width: 1500px;
+$label-width: 90px;
+$label-blank: 8px;
+
+// font
+$normal: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+
+/* $cell-color1: #fbb5ea;
+$cell-color2: #e2ff09;
+$cell-color3: #9cc1d4;
+$cell-color4: #00cb80;
+$cell-color5: #ffa800;
+$cell-color6: #69eef8;
+$cell-color7: #ca1df5;
+$cell-color8: #ffd600;
+$cell-color9: #6776ff;
+$cell-color10: #ff3c3c;
+
+$cell-color11: #c86f68;
+$cell-color12: #efecc8;
+$cell-color13: #65fe1e;
+$cell-color14: #7fb6a8;
+$cell-color15: #f1f4b2;
+$cell-color16: #f4a097;
+$cell-color17: #d9f3b1;
+$cell-color18: #8d6cf2;
+$cell-color19: #ace44b;
+$cell-color20: #f7eee7;
+
+$cell-color21: #ebd1ae;
+$cell-color22: #00aad9;
+$cell-color23: #acaaef;
+$cell-color24: #aacff0;
+$cell-color25: #f864fa;
+$cell-color26: #26ac2f;
+$cell-color27: #eaa77d;
+$cell-color28: #1de0c2;
+$cell-color29: #c2b9cf;
+$cell-color30: #c9b496;
+
+$cell-color31: #f3e3a7;
+$cell-color32: #dabeb4;
+$cell-color33: #6d9dd3;
+$cell-color34: #cdc8b8;
+$cell-color35: #9ae1a3;
+$cell-color36: #d0dbd1;
+$cell-color37: #ff4fa7;
+$cell-color38: #1ff08f;
+$cell-color39: #9dbfba;
+$cell-color40: #e89c99;
+
+$cell-color41: #8db882;
+$cell-color42: #00a3ff;
+$cell-color43: #b0d4be;
+$cell-color44: #d8acd8;
+$cell-color45: #d0c1bb;
+$cell-color46: #a4cfcc;
+$cell-color47: #d4e0c6;
+$cell-color48: #b1cfd9;
+$cell-color49: #9ae2ea;
+$cell-color50: #ff7543;
+
+$cell-deep-color1: #e727ae;
+$cell-deep-color2: #b2ca00;
+$cell-deep-color3: #3284ae;
+$cell-deep-color4: #00a568;
+$cell-deep-color5: #e38800;
+$cell-deep-color6: #46acb8;
+$cell-deep-color7: #b400e0;
+$cell-deep-color8: #d3b100;
+$cell-deep-color9: #0013bf;
+$cell-deep-color10: #ff2c2c;
+
+$cell-deep-color11: #7a0900;
+$cell-deep-color12: #a39a35;
+$cell-deep-color13: #44d401;
+$cell-deep-color14: #2e6255;
+$cell-deep-color15: #b2bb00;
+$cell-deep-color16: #d17970;
+$cell-deep-color17: #87b145;
+$cell-deep-color18: #5929ee;
+$cell-deep-color19: #81bf14;
+$cell-deep-color20: #ba9c84;
+
+$cell-deep-color21: #ae936e;
+$cell-deep-color22: #007798;
+$cell-deep-color23: #5a588d;
+$cell-deep-color24: #72abde;
+$cell-deep-color25: #c616c9;
+$cell-deep-color26: #1b8022;
+$cell-deep-color27: #a5663e;
+$cell-deep-color28: #00a78d;
+$cell-deep-color29: #695389;
+$cell-deep-color30: #604d31;
+
+$cell-deep-color31: #d1b23a;
+$cell-deep-color32: #8f5b48;
+$cell-deep-color33: #47709d;
+$cell-deep-color34: #a49a7b;
+$cell-deep-color35: #62b16c;
+$cell-deep-color36: #8da58f;
+$cell-deep-color37: #d90e74;
+$cell-deep-color38: #00c86b;
+$cell-deep-color39: #679b93;
+$cell-deep-color40: #b45855;
+
+$cell-deep-color41: #315228;
+$cell-deep-color42: #008cdb;
+$cell-deep-color43: #44855d;
+$cell-deep-color44: #8a628a;
+$cell-deep-color45: #b49184;
+$cell-deep-color46: #5ca09c;
+$cell-deep-color47: #7c9959;
+$cell-deep-color48: #648e9c;
+$cell-deep-color49: #46acb8;
+$cell-deep-color50: #dd3b00; */
+
+$cellColors: (
+	cell-1: (
+		color: #fbb5ea,
+		deepColor: #e727ae,
+	),
+	cell-2: (
+		color: #e2ff09,
+		deepColor: #b2ca00,
+	),
+	cell-3: (
+		color: #9cc1d4,
+		deepColor: #3284ae,
+	),
+	cell-4: (
+		color: #00cb80,
+		deepColor: #00a568,
+	),
+	cell-5: (
+		color: #ffa800,
+		deepColor: #e38800,
+	),
+	cell-6: (
+		color: #69eef8,
+		deepColor: #46acb8,
+	),
+	cell-7: (
+		color: #ca1df5,
+		deepColor: #b400e0,
+	),
+	cell-8: (
+		color: #ffd600,
+		deepColor: #d3b100,
+	),
+	cell-9: (
+		color: #6776ff,
+		deepColor: #0013bf,
+	),
+	cell-10: (
+		color: #ff3c3c,
+		deepColor: #ff2c2c,
+	),
+	cell-11: (
+		color: #c86f68,
+		deepColor: #7a0900,
+	),
+	cell-12: (
+		color: #efecc8,
+		deepColor: #a39a35,
+	),
+	cell-13: (
+		color: #65fe1e,
+		deepColor: #44d401,
+	),
+	cell-14: (
+		color: #7fb6a8,
+		deepColor: #2e6255,
+	),
+	cell-15: (
+		color: #f1f4b2,
+		deepColor: #b2bb00,
+	),
+	cell-16: (
+		color: #f4a097,
+		deepColor: #d17970,
+	),
+	cell-17: (
+		color: #d9f3b1,
+		deepColor: #87b145,
+	),
+	cell-18: (
+		color: #8d6cf2,
+		deepColor: #5929ee,
+	),
+	cell-19: (
+		color: #ace44b,
+		deepColor: #81bf14,
+	),
+	cell-20: (
+		color: #f7eee7,
+		deepColor: #ba9c84,
+	),
+	cell-21: (
+		color: #ebd1ae,
+		deepColor: #ae936e,
+	),
+	cell-22: (
+		color: #00aad9,
+		deepColor: #007798,
+	),
+	cell-23: (
+		color: #acaaef,
+		deepColor: #5a588d,
+	),
+	cell-24: (
+		color: #aacff0,
+		deepColor: #72abde,
+	),
+	cell-25: (
+		color: #f864fa,
+		deepColor: #c616c9,
+	),
+	cell-26: (
+		color: #26ac2f,
+		deepColor: #1b8022,
+	),
+	cell-27: (
+		color: #eaa77d,
+		deepColor: #a5663e,
+	),
+	cell-28: (
+		color: #1de0c2,
+		deepColor: #00a78d,
+	),
+	cell-29: (
+		color: #c2b9cf,
+		deepColor: #695389,
+	),
+	cell-30: (
+		color: #c9b496,
+		deepColor: #604d31,
+	),
+	cell-31: (
+		color: #f3e3a7,
+		deepColor: #d1b23a,
+	),
+	cell-32: (
+		color: #dabeb4,
+		deepColor: #8f5b48,
+	),
+	cell-33: (
+		color: #6d9dd3,
+		deepColor: #47709d,
+	),
+	cell-34: (
+		color: #cdc8b8,
+		deepColor: #a49a7b,
+	),
+	cell-35: (
+		color: #9ae1a3,
+		deepColor: #62b16c,
+	),
+	cell-36: (
+		color: #d0dbd1,
+		deepColor: #8da58f,
+	),
+	cell-37: (
+		color: #ff4fa7,
+		deepColor: #d90e74,
+	),
+	cell-38: (
+		color: #1ff08f,
+		deepColor: #00c86b,
+	),
+	cell-39: (
+		color: #9dbfba,
+		deepColor: #679b93,
+	),
+	cell-40: (
+		color: #e89c99,
+		deepColor: #b45855,
+	),
+	cell-41: (
+		color: #8db882,
+		deepColor: #315228,
+	),
+	cell-42: (
+		color: #00a3ff,
+		deepColor: #008cdb,
+	),
+	cell-43: (
+		color: #b0d4be,
+		deepColor: #44855d,
+	),
+	cell-44: (
+		color: #d8acd8,
+		deepColor: #8a628a,
+	),
+	cell-45: (
+		color: #d0c1bb,
+		deepColor: #b49184,
+	),
+	cell-46: (
+		color: #a4cfcc,
+		deepColor: #5ca09c,
+	),
+	cell-47: (
+		color: #d4e0c6,
+		deepColor: #7c9959,
+	),
+	cell-48: (
+		color: #b1cfd9,
+		deepColor: #648e9c,
+	),
+	cell-49: (
+		color: #9ae2ea,
+		deepColor: #46acb8,
+	),
+	cell-50: (
+		color: #ff7543,
+		deepColor: #dd3b00,
+	),
+);
+
+$eventColors: (
+	cell-1: (
+		color: #fbfef7,
+		deepColor: #87b145,
+	),
+	cell-2: (
+		color: #fefef7,
+		deepColor: #b2bb00,
+	),
+	cell-3: (
+		color: #fefcf6,
+		deepColor: #d1b23a,
+	),
+	cell-4: (
+		color: #fff8fd,
+		deepColor: #e727ae,
+	),
+	cell-5: (
+		color: #f5fcfd,
+		deepColor: #46acb8,
+	),
+	cell-6: (
+		color: #f7fafe,
+		deepColor: #72abde,
+	),
+	cell-7: (
+		color: #f7f7fd,
+		deepColor: #acaaef,
+	),
+	cell-8: (
+		color: #fef6f5,
+		deepColor: #d17970,
+	),
+	cell-9: (
+		color: #fdf6f2,
+		deepColor: #a5663e,
+	),
+	cell-10: (
+		color: #fafaf8,
+		deepColor: #a49a7b,
+	),
+);
