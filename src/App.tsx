@@ -17,6 +17,7 @@ import Layout from "@/routs/Layout";
 import { useResizeObserver } from "@/hooks/useResizeObserver";
 import { useEffect } from "react";
 import Header from "@/routs/Header";
+import CenterLayout from "@/routs/CenterLayout";
 
 const App = () => {
   /**
@@ -55,13 +56,15 @@ const App = () => {
           token: {
             colorPrimary: "#3579d4",
             colorPrimaryBg: "#3579d4",
-            // fontFamily: '',
+            fontFamily: "Pretender",
           },
         }}
         locale={ko}
       >
         <div className="App">
-          <Layout />
+          <Layout>
+            <CenterLayout />
+          </Layout>
           <Loading />
         </div>
       </ConfigProvider>
