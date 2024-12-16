@@ -1,5 +1,5 @@
 import { Button } from 'antd';
-import { setLoading } from '@/store/core/loadingStore';
+import { setLoading } from '@/store/reducers/loadingReducer';
 import _ from 'lodash';
 import { ButtonGroup } from 'react-bootstrap';
 import { useAppDispatch } from '@/store/coreHook';

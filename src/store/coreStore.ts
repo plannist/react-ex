@@ -21,7 +21,7 @@ import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 // Store
-import loadingReducer from '@/store/core/loadingStore';
+import loadingReducer from '@/store/reducers/loadingReducer';
 
 // Reducer 명은 유니크 해야 한다.
 const rootReducer = combineReducers({
