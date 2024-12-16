@@ -1,4 +1,5 @@
-import { Button, Form, Input } from 'antd';
+import { Button, Form } from 'antd';
+import InputText from '@/component/form/InputText';
 
 const TestRout = () => {
   console.log('TestRout');
@@ -16,7 +17,7 @@ const TestRout = () => {
                   <tr>
                     <th>ID</th>
                     <td>
-                      <Input name="id"></Input>
+                      <InputText name="id"></InputText>
                     </td>
                     <th>저장</th>
                     <td>
