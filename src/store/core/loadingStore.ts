@@ -11,15 +11,15 @@
  */
 
 // Store
-import store from "@/store/coreStore";
 
 // Libs
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import store from '@/store/coreStore';
 
 const loading = false;
 
 export const loadingStore = createSlice({
-  name: "loading",
+  name: 'loading',
   initialState: {
     loading,
   },
@@ -33,7 +33,7 @@ export const loadingStore = createSlice({
 export const { setLoading } = loadingStore.actions;
 export default loadingStore.reducer;
 
-export const dispatchSetLoading = (action: boolean): void => {
-  store.dispatch(setLoading(action));
-  return;
-};
+// export const dispatchSetLoading = (action: boolean): void => {
+//   store.dispatch(setLoading(action));
+//   return;
+// };

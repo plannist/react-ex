@@ -11,10 +11,10 @@
  */
 
 // hooks
-import { useAppSelector } from "@/store/coreHook";
+import { useAppSelector } from '@/store/coreHook';
 
 // Antd items
-import { Spin } from "antd";
+import { Spin } from 'antd';
 
 const Loading = () => {
   /**

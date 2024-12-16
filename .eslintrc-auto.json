@@ -12,9 +12,6 @@
     "useResolvedPath": true,
     "useRoutes": true,
 
-
-
-
     "Link": true,
     "NavLink": true,
     "Navigate": true,

@@ -1,0 +1,31 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",          // ESLint 기본 추천 규칙
+    "plugin:react/recommended",    // React 관련 ESLint 규칙
+    "plugin:prettier/recommended",  // Prettier와 ESLint의 충돌을 방지
+    "./.eslintrc-auto.json"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",  // React import 검사 비활성화
+    "quotes": ["error", "single"],     // 싱글 쿼테이션 강제
+    "prettier/prettier": ["error", {   // Prettier 규칙
+      "singleQuote": true,             // 싱글 쿼테이션
+      "semi": true                     // 세미콜론 사용
+    }],
+    "react/prop-types": "off",         // React PropTypes 사용 안 함
+    "no-unused-vars": "warn"           // 사용되지 않는 변수 경고
+  }
+}

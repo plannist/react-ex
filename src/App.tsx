@@ -1,23 +1,15 @@
 // import "./App.css";
 
-import ReactDOM from "react-dom"; // React 17
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ConfigProvider } from 'antd';
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, ConfigProvider } from "antd";
-
-import ko from "antd/es/locale/ko_KR";
-import _ from "lodash";
-
+import ko from 'antd/es/locale/ko_KR';
 //style
-import "@/assets/sass/style.scss";
+import '@/assets/sass/style.scss';
 
-import { useAppDispatch, useAppSelector } from "@/store/coreHook";
-import Loading from "@/component/core/Loading";
-import Layout from "@/routs/Layout";
-import { useResizeObserver } from "@/hooks/useResizeObserver";
-import { useEffect } from "react";
-import Header from "@/routs/Header";
-import CenterLayout from "@/routs/CenterLayout";
+import Loading from '@/component/core/Loading';
+import Layout from '@/layout/Layout';
+import { useEffect } from 'react';
 
 const App = () => {
   /**
@@ -28,10 +20,10 @@ const App = () => {
 
   const { VITE_APP_TITLE } = import.meta.env;
 
-  const loading = useAppSelector((state) => state.loading);
-
-  const dispatch = useAppDispatch();
-  const navigate = useNavigate();
+  // const loading = useAppSelector((state) => state.loading);
+  //
+  // const dispatch = useAppDispatch();
+  // const navigate = useNavigate();
 
   /**
    * =====================================================================
@@ -54,17 +46,15 @@ const App = () => {
         theme={{
           hashed: false,
           token: {
-            colorPrimary: "#3579d4",
-            colorPrimaryBg: "#3579d4",
-            fontFamily: "Pretender",
+            colorPrimary: '#3579d4',
+            colorPrimaryBg: '#3579d4',
+            fontFamily: 'Pretender',
           },
         }}
         locale={ko}
       >
         <div className="App">
-          <Layout>
-            <CenterLayout />
-          </Layout>
+          <Layout />
           <Loading />
         </div>
       </ConfigProvider>

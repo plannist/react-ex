@@ -10,34 +10,34 @@
  * 2024.03.11           Canal framework        		신규 생성
  */
 export const useResizeObserver = () => {
-	/**
-	 * =====================================================================
-	 *  변수 선언부
-	 * =====================================================================
-	 */
-	const [width, setWidth] = useState(null);
-	const ref = useRef(null);
-	/**
-	 * =====================================================================
-	 *  Hook
-	 * =====================================================================
-	 */
-	useEffect(() => {
-		const observeTarget = ref.current;
-		if (!observeTarget) return;
+  /**
+   * =====================================================================
+   *  변수 선언부
+   * =====================================================================
+   */
+  const [width, setWidth] = useState(null);
+  const ref = useRef(null);
+  /**
+   * =====================================================================
+   *  Hook
+   * =====================================================================
+   */
+  useEffect(() => {
+    const observeTarget = ref.current;
+    if (!observeTarget) return;
 
-		const resizeObserver = new ResizeObserver(entries => {
-			entries.forEach(entry => {
-				setWidth(entry.contentRect.width);
-			});
-		});
+    const resizeObserver = new ResizeObserver((entries) => {
+      entries.forEach((entry) => {
+        setWidth(entry.contentRect.width);
+      });
+    });
 
-		resizeObserver.observe(observeTarget);
+    resizeObserver.observe(observeTarget);
 
-		return () => {
-			resizeObserver.disconnect();
-		};
-	}, [ref.current]);
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [ref.current]);
 
-	return { ref, width };
+  return { ref, width };
 };

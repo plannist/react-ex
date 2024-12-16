@@ -9,45 +9,37 @@
  * ---------------------------------------------------------------------
  * 2024.03.11           Canal framework        		신규 생성
  */
+
 // Libs
 import {
   combineReducers,
   configureStore,
   PreloadedState,
-} from "@reduxjs/toolkit";
-import { persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
+} from '@reduxjs/toolkit';
+
+import { persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
 // Store
-import loadingReducer from "@/store/core/loadingStore";
+import loadingReducer from '@/store/core/loadingStore';
+
 // Reducer 명은 유니크 해야 한다.
 const rootReducer = combineReducers({
+  loading: loadingReducer,
   // menu: menuReducer,
   // user: userReducer,
   // tab: tabReducer,
-  loading: loadingReducer,
-  // comCd: comCdReducer,
-  //bzns Store
-  // sbzStore: sbzReducer,
 });
 
 // config 작성
 const persistConfig = {
-  key: "root", // localStorage key
+  key: 'root', // localStorage key
   storage, // localStorage
   // whitelist: ['user', 'tab'], // target (reducer name)
-  whitelist: ["tab"], // target (reducer name)
+  whitelist: ['tab'], // target (reducer name)
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
-
-// export function setupStore(preloadedState?: PreloadedState<RootState>) {
-// 	return configureStore({
-// 		reducer: rootReducer,
-// 		devTools: process.env.NODE_ENV !== 'production',
-// 		preloadedState,
-// 	});
-// }
 
 const store = configureStore({
   reducer: persistedReducer,
@@ -62,7 +54,7 @@ const store = configureStore({
  * @returns {object} store object
  */
 export function setupStore(preloadedState?: PreloadedState<RootState>) {
-  console.log("setupStore : ", preloadedState);
+  console.log('setupStore : ', preloadedState);
   return configureStore({
     reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>
@@ -74,6 +66,5 @@ export function setupStore(preloadedState?: PreloadedState<RootState>) {
 
 export type RootState = ReturnType<typeof rootReducer>;
 export type AppStore = ReturnType<typeof setupStore>;
-export type AppDispatch = AppStore["dispatch"];
-// export default rootReducer;
+export type AppDispatch = AppStore['dispatch'];
 export default store;

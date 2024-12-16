@@ -1,14 +1,13 @@
-import { Button, Form, Input } from "antd";
-import { useEffect } from "react";
+import { Button, Form, Input } from 'antd';
 
 const TestRout = () => {
-  console.log("TestRout");
+  console.log('TestRout');
   const navigate = useNavigate();
   const [form] = Form.useForm();
 
   return (
     <>
-      <div className={"page"}>
+      <div className={'page'}>
         <section className="section">
           <Form form={form}>
             <div className="tbl-wrap">
@@ -23,22 +22,22 @@ const TestRout = () => {
                     <td>
                       <Button
                         onClick={() => {
-                          console.log("formData: ", form.getFieldsValue());
+                          console.log('formData: ', form.getFieldsValue());
                         }}
                         type="primary"
                       >
-                        {"저장"}
+                        {'저장'}
                       </Button>
                     </td>
-                    <th>뒤로가기</th>
+                    <th>두번째페이지</th>
                     <td>
                       <Button
                         onClick={() => {
-                          navigate(-1);
+                          navigate('/test/SecondsRoute');
                         }}
                         type="text"
                       >
-                        {"뒤로가기"}
+                        {'뒤로가기'}
                       </Button>
                     </td>
                   </tr>
