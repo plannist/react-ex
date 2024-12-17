@@ -23,6 +23,8 @@ const AsideLayout = (props: AsideProps) => {
    */
   const { collapse, setCollapse } = props;
   const [activeMenu, setActiveMenu] = useState(0);
+  const [sm1, setSm1] = useState(0);
+  const [sm2, setSm2] = useState(0);
   const [isDark, setDark] = useState(false);
   const navigate = useNavigate();
 
