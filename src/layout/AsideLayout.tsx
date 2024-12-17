@@ -8,6 +8,7 @@ import SiteMapIcon from '@/assets/icon/icon-sitemap.svg?react';
 import DarkModeIcon from '@/assets/icon/icon-dark.svg?react';
 import LightModeIcon from '@/assets/icon/icon-light.svg?react';
 import MenuArrIcon from '@/assets/icon/icon-menu-arr.svg?react';
+import _ from 'lodash';
 
 type AsideProps = {
   collapse: boolean;
@@ -23,6 +24,7 @@ const AsideLayout = (props: AsideProps) => {
   const { collapse, setCollapse } = props;
   const [activeMenu, setActiveMenu] = useState(0);
   const [isDark, setDark] = useState(false);
+  const navigate = useNavigate();
 
   /**
    * =====================================================================
@@ -47,6 +49,16 @@ const AsideLayout = (props: AsideProps) => {
     }*/
 
     setActiveMenu(idx);
+  };
+
+  const goPage = (url: string) => {
+    if (_.isEmpty(url)) {
+      console.log('page is empty');
+      return false;
+    }
+
+    console.log('page url is [', url, ']');
+    navigate(url);
   };
 
   return (
@@ -126,12 +138,59 @@ const AsideLayout = (props: AsideProps) => {
             <li
               id={'left_1'}
               key={'aside_header_1'}
-              className="aside__1depth-item close"
+              // className="aside__1depth-item close"
+              className="aside__1depth-item"
             >
               <div className="icon-arrow">
-                1번메뉴
+                대메뉴
                 <MenuArrIcon />
               </div>
+
+              {/* 2.중메뉴 */}
+              <ul key={'header_2'} className="aside__2depth">
+                <li
+                  id={'left_2'}
+                  className="aside__2depth-item"
+                  // className="aside__2depth-item close"
+                  key={'aside_header_2'}
+                >
+                  <div className="icon-arrow">
+                    중메뉴
+                    <MenuArrIcon />
+                  </div>
+
+                  {/* 3.소메뉴 */}
+                  <dl className="aside__3depth">
+                    <dd
+                      key={'aside_menu_1'}
+                      className={'aside__3depth-item selected'}
+                      onClick={() => {
+                        goPage('/');
+                      }}
+                    >
+                      홈화면
+                    </dd>
+                    <dd
+                      key={'aside_menu_2'}
+                      className={'aside__3depth-item selected'}
+                      onClick={() => {
+                        goPage('/example/InsertForm');
+                      }}
+                    >
+                      테스트폼 등록
+                    </dd>
+                    <dd
+                      key={'aside_menu_3'}
+                      className={'aside__3depth-item'}
+                      onClick={() => {
+                        goPage('/example/SearchForm');
+                      }}
+                    >
+                      테스트 그리드 조회
+                    </dd>
+                  </dl>
+                </li>
+              </ul>
             </li>
           </ul>
         </menu>

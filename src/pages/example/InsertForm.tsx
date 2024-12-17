@@ -1,7 +1,7 @@
 import { Button, Form } from 'antd';
 import InputText from '@/component/form/InputText';
 
-const TestRout = () => {
+const InsertForm = () => {
   console.log('TestRout');
   const navigate = useNavigate();
   const [form] = Form.useForm();
@@ -30,11 +30,11 @@ const TestRout = () => {
                         {'저장'}
                       </Button>
                     </td>
-                    <th>두번째페이지</th>
+                    <th>뒤로가기</th>
                     <td>
                       <Button
                         onClick={() => {
-                          navigate('/test/SecondsRoute');
+                          navigate(-1);
                         }}
                         type="text"
                       >
@@ -52,4 +52,4 @@ const TestRout = () => {
   );
 };
 
-export default TestRout;
+export default InsertForm;
