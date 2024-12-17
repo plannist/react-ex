@@ -1,13 +1,13 @@
 /**
- * @copyright Copyright 2024. CJ OliveNetworks Co. all rights reserved.
- * @file component/commons/core/form/InputText.tsx
- * @description InputText Component
- * @author Canal Frame
- * @since 2023.09.25
+ * @copyright Copyright 2024. xxx. all rights reserved.
+ * @context antd Input wrapper
+ * @description form 요소를 편하게 사용하기 위한 component
+ * @author xx
+ * @since 2025.01.01
  * ---------------------------------------------------------------------
  * Date                     AUTHOR                  MAJOR_ISSUE
  * ---------------------------------------------------------------------
- * 2023.09.25        				Canal Frame        			신규 생성
+ * 2023.09.25        				xxxx xxx        			  신규 생성
  */
 
 // Antd items

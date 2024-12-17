@@ -46,9 +46,9 @@
     "typescript": "^5.2.2",
     "unplugin-auto-import": "^0.15.1",
     "vite": "^5.2.0",
-    "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-pages": "^0.32.1",
     "vite-plugin-svgr": "^4.2.0",
+    "vite-plugin-eslint": "^1.8.1",
     "vite-tsconfig-paths": "^3.6.0"
   }
 }

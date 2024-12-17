@@ -48,13 +48,15 @@
     "moduleResolution": "node", // 모듈을 로드하는 방법
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "types": ["vite-plugin-svgr/client"]
   },
 
   "include": [
     "src",
     "auto.d.ts",
-    "vite.config.ts"
+    "vite.config.ts",
+    "svg.d.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

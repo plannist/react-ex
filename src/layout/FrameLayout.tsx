@@ -1,6 +1,7 @@
 import React, { ReactNode, useEffect } from 'react';
 import Header from '@/routs/Header';
 import { useResizeObserver } from '@/hooks/useResizeObserver';
+import AsideLayout from '@/layout/AsideLayout';
 
 export interface ComponentReactElement {
   children?: ReactNode | ReactNode[];
@@ -12,6 +13,7 @@ type Props = ComponentReactElement;
 
 const FrameLayout = ({ children }: Props) => {
   const { ref, width } = useResizeObserver(); //변경 여부 체크
+  const [isCollapse, setIsCollapse] = useState(false);
 
   useEffect(() => {
     console.log('children >> ', children);
@@ -24,7 +26,11 @@ const FrameLayout = ({ children }: Props) => {
   return (
     <>
       <main>
-        <Header />
+        {/*<Header />*/}
+        <AsideLayout
+          collapse={false}
+          setCollapse={() => setIsCollapse(!isCollapse)}
+        />
         <div className="content">
           <div ref={ref}>{children}</div>
         </div>
