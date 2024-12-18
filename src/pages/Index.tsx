@@ -28,11 +28,12 @@ const Index = () => {
     //TODO: 서버 연동
     //prettier-ignore
     const menuList: MenuType[] = [
-      { menuId: 'root1', menuName: '대메뉴1', menuUrl: '' },
+      { menuId: 'root1', menuName: '대메뉴1', menuUrl: '', parentId: ''  },
       { menuId: 'root2', menuName: '대메뉴2', menuUrl: '', parentId: '' },
       { menuId: 'sec1', menuName: '중메뉴1', menuUrl: '', parentId: 'root1' },
       { menuId: 'sec2', menuName: '중메뉴2', menuUrl: '', parentId: 'root1' },
       { menuId: 'thd1', menuName: '홈화면', menuUrl: '/', parentId: 'sec1' },
+
       {menuId: 'thd2',menuName: '테스트등록',menuUrl: '/example/InsertForm',parentId: 'sec1'},
       {menuId: 'thd3',menuName: '테스트 그리드 조회',menuUrl: '/example/SearchForm',parentId: 'sec1'},
     ];

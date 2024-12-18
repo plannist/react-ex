@@ -134,7 +134,7 @@ const AsideLayout = (props: AsideProps) => {
               return e.parentId === main.menuId;
             });
             return (
-              <ul key={'menu_main'} className="aside__1depth">
+              <ul key={'ul_'.concat(main.menuId)} className="aside__1depth">
                 {/* 1.대메뉴 */}
                 <li
                   id={main.menuId}
