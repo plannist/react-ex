@@ -34,7 +34,7 @@ const Index = () => {
       { menuId: 'sec2', menuName: '중메뉴2', menuUrl: '', parentId: 'root1' },
       { menuId: 'thd1', menuName: '홈화면', menuUrl: '/', parentId: 'sec1' },
       {menuId: 'thd2',menuName: '테스트등록',menuUrl: '/example/InsertForm',parentId: 'sec1'},
-      {menuId: 'thd3',menuName: '테스트 그리드 조회',menuUrl: '/example/SearchFrom',parentId: 'sec1'},
+      {menuId: 'thd3',menuName: '테스트 그리드 조회',menuUrl: '/example/SearchForm',parentId: 'sec1'},
     ];
     dispatch(setMenu(menuList));
   }, []);

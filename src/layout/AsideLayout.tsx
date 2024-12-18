@@ -10,7 +10,8 @@ import LightModeIcon from '@/assets/icon/icon-light.svg?react';
 import MenuArrIcon from '@/assets/icon/icon-menu-arr.svg?react';
 import _ from 'lodash';
 import { useAppSelector } from '@/store/coreHook';
-import { MenuType } from '@/store/reducers/menuReducer';
+import { MenuType, setSelectedMenu } from '@/store/reducers/menuReducer';
+import { useDispatch } from 'react-redux';
 
 type AsideProps = {
   collapse: boolean;
@@ -30,6 +31,8 @@ const AsideLayout = (props: AsideProps) => {
   const [isDark, setDark] = useState(false);
   const navigate = useNavigate();
   const { menuList } = useAppSelector((state) => state.menu);
+  const selectedMenu = useAppSelector((state) => state.menu.selectedMenu);
+  const dispatch = useDispatch();
 
   /**
    * =====================================================================
@@ -167,9 +170,10 @@ const AsideLayout = (props: AsideProps) => {
                               return (
                                 <dd
                                   key={last.menuId}
-                                  className={'aside__3depth-item selected'}
+                                  className={`aside__3depth-item ${selectedMenu?.menuId === last.menuId ? 'selected' : ''}`}
                                   onClick={() => {
-                                    goPage(last.menuId);
+                                    dispatch(setSelectedMenu(last));
+                                    goPage(last.menuUrl);
                                   }}
                                 >
                                   {last.menuName}
