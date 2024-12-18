@@ -11,6 +11,7 @@
     "lint-fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.5.2",
     "@reduxjs/toolkit": "^1.8.5",
     "antd": "^5.15.1",
     "axios": "^1.7.9",
@@ -46,9 +47,9 @@
     "typescript": "^5.2.2",
     "unplugin-auto-import": "^0.15.1",
     "vite": "^5.2.0",
+    "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-pages": "^0.32.1",
     "vite-plugin-svgr": "^4.2.0",
-    "vite-plugin-eslint": "^1.8.1",
     "vite-tsconfig-paths": "^3.6.0"
   }
 }

@@ -7,7 +7,8 @@
     "eslint:recommended",          // ESLint 기본 추천 규칙
     "plugin:react/recommended",    // React 관련 ESLint 규칙
     "plugin:prettier/recommended",  // Prettier와 ESLint의 충돌을 방지
-    "./.eslintrc-auto.json"
+    "./.eslintrc-auto.json",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {

@@ -9,6 +9,8 @@ import DarkModeIcon from '@/assets/icon/icon-dark.svg?react';
 import LightModeIcon from '@/assets/icon/icon-light.svg?react';
 import MenuArrIcon from '@/assets/icon/icon-menu-arr.svg?react';
 import _ from 'lodash';
+import { useAppSelector } from '@/store/coreHook';
+import { MenuType } from '@/store/reducers/menuReducer';
 
 type AsideProps = {
   collapse: boolean;
@@ -23,10 +25,11 @@ const AsideLayout = (props: AsideProps) => {
    */
   const { collapse, setCollapse } = props;
   const [activeMenu, setActiveMenu] = useState(0);
-  const [sm1, setSm1] = useState(0);
+  const [rootMenu, setRootMenu] = useState<MenuType[]>([]);
   const [sm2, setSm2] = useState(0);
   const [isDark, setDark] = useState(false);
   const navigate = useNavigate();
+  const { menuList } = useAppSelector((state) => state.menu);
 
   /**
    * =====================================================================
@@ -63,56 +66,41 @@ const AsideLayout = (props: AsideProps) => {
     navigate(url);
   };
 
+  useEffect(() => {
+    setRootMenu(menuList.filter((e: MenuType) => !e.parentId));
+  }, []);
+
+  useEffect(() => {
+    if (rootMenu && rootMenu.length > 0) {
+      console.log('rootMenu: ', rootMenu);
+    }
+  }, [rootMenu]);
+
   return (
     <>
       <Aside className={props.collapse ? 'aside off' : 'aside on'}>
-        {/*      */}
+        {/*   side - left   */}
         <div className="menu-side">
           <ul>
-            <li
-              className={
-                activeMenu === 0 ? 'menu-side-item on' : 'menu-side-item'
-              }
-            >
-              <Button
-                className="btn-icon btn-icon-home"
-                type="link"
-                size="small"
-                onClick={() => menuClick(0)}
-              >
+            <li className={activeMenu === 0 ? 'menu-side-item on' : 'menu-side-item'}>
+              <Button className="btn-icon btn-icon-home" type="link" size="small" onClick={() => menuClick(0)}>
                 <MenuIcon />
                 {'메뉴'}
               </Button>
             </li>
-            {/*  */}
-            <li
-              className={
-                activeMenu === 1 ? 'menu-side-item on' : 'menu-side-item'
-              }
-            >
-              <Button
-                className="btn-icon btn-icon-star"
-                type="link"
-                size="small"
-                onClick={() => menuClick(1)}
-              >
+            <li className={activeMenu === 1 ? 'menu-side-item on' : 'menu-side-item'}>
+              <Button className="btn-icon btn-icon-star" type="link" size="small" onClick={() => menuClick(1)}>
                 <StarIcon />
                 {'즐겨찾기'}
               </Button>
             </li>
             <li className="menu-side-item">
-              <Button
-                className="btn-icon btn-icon-site"
-                type="link"
-                size="small"
-                onClick={() => menuClick(2)}
-              >
+              <Button className="btn-icon btn-icon-site" type="link" size="small" onClick={() => menuClick(2)}>
                 <SiteMapIcon />
                 {'사이트맵'}
               </Button>
             </li>
           </ul>
-
           <ul className="menu-side-bottom">
             <li className="menu-side-item">
               <Button
@@ -129,72 +117,74 @@ const AsideLayout = (props: AsideProps) => {
             </li>
           </ul>
         </div>
-
+        {/*   side - right  */}
         <menu>
           <h1 className="logo">
             로고영역
             <a className="logo-icon">{/*로고아이콘*/}</a>
           </h1>
           <div className="menu-top">{/*검색폼등*/}</div>
-          <ul key={'main_menu_1'} className="aside__1depth">
-            <li
-              id={'left_1'}
-              key={'aside_header_1'}
-              // className="aside__1depth-item close"
-              className="aside__1depth-item"
-            >
-              <div className="icon-arrow">
-                대메뉴
-                <MenuArrIcon />
-              </div>
 
-              {/* 2.중메뉴 */}
-              <ul key={'header_2'} className="aside__2depth">
+          {rootMenu.map((main) => {
+            //
+            const middleMenus = menuList.filter((e) => {
+              return e.parentId === main.menuId;
+            });
+            return (
+              <ul key={'menu_main'} className="aside__1depth">
+                {/* 1.대메뉴 */}
                 <li
-                  id={'left_2'}
-                  className="aside__2depth-item"
-                  // className="aside__2depth-item close"
-                  key={'aside_header_2'}
+                  id={main.menuId}
+                  key={main.menuId}
+                  // className="aside__1depth-item close"
+                  className="aside__1depth-item open"
                 >
                   <div className="icon-arrow">
-                    중메뉴
+                    {main.menuName}
                     <MenuArrIcon />
                   </div>
+                  {/* 2.중메뉴1 */}
+                  <ul key={'menu_second'} className="aside__2depth">
+                    {middleMenus.map((middle) => {
+                      //
+                      const lastMenus = menuList.filter((e) => e.parentId === middle.menuId);
 
-                  {/* 3.소메뉴 */}
-                  <dl className="aside__3depth">
-                    <dd
-                      key={'aside_menu_1'}
-                      className={'aside__3depth-item selected'}
-                      onClick={() => {
-                        goPage('/');
-                      }}
-                    >
-                      홈화면
-                    </dd>
-                    <dd
-                      key={'aside_menu_2'}
-                      className={'aside__3depth-item selected'}
-                      onClick={() => {
-                        goPage('/example/InsertForm');
-                      }}
-                    >
-                      테스트폼 등록
-                    </dd>
-                    <dd
-                      key={'aside_menu_3'}
-                      className={'aside__3depth-item'}
-                      onClick={() => {
-                        goPage('/example/SearchForm');
-                      }}
-                    >
-                      테스트 그리드 조회
-                    </dd>
-                  </dl>
+                      return (
+                        <li
+                          id={middle.menuId}
+                          key={middle.menuId}
+                          className="aside__2depth-item open"
+                          // className="aside__2depth-item close"
+                        >
+                          <div className="icon-arrow">
+                            {middle.menuName}
+                            <MenuArrIcon />
+                          </div>
+                          {/* 3.소메뉴 */}
+                          <dl className="aside__3depth open">
+                            {lastMenus.map((last) => {
+                              //
+                              return (
+                                <dd
+                                  key={last.menuId}
+                                  className={'aside__3depth-item selected'}
+                                  onClick={() => {
+                                    goPage(last.menuId);
+                                  }}
+                                >
+                                  {last.menuName}
+                                </dd>
+                              );
+                            })}
+                          </dl>
+                        </li>
+                      );
+                    })}
+                  </ul>
                 </li>
               </ul>
-            </li>
-          </ul>
+            );
+          })}
         </menu>
       </Aside>
     </>

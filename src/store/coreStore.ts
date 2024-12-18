@@ -22,11 +22,12 @@ import storage from 'redux-persist/lib/storage';
 
 // Store
 import loadingReducer from '@/store/reducers/loadingReducer';
+import menuReducer from '@/store/reducers/menuReducer';
 
 // Reducer 명은 유니크 해야 한다.
 const rootReducer = combineReducers({
   loading: loadingReducer,
-  // menu: menuReducer,
+  menu: menuReducer,
   // user: userReducer,
   // tab: tabReducer,
 });
