@@ -1,5 +1,6 @@
 import { Button, Form } from 'antd';
 import InputText from '@/component/form/InputText';
+import MenuTitle from '@/component/core/MenuTitle';
 
 const InsertForm = () => {
   console.log('TestRout');
@@ -9,6 +10,7 @@ const InsertForm = () => {
   return (
     <>
       <div className={'page'}>
+        <MenuTitle title={'등록양식'} />
         <section className="section">
           <Form form={form}>
             <div className="tbl-wrap">

@@ -27,11 +27,14 @@ const AsideLayout = (props: AsideProps) => {
   const { collapse, setCollapse } = props;
   const [activeMenu, setActiveMenu] = useState(0);
   const [rootMenu, setRootMenu] = useState<MenuType[]>([]);
-  const [sm2, setSm2] = useState(0);
   const [isDark, setDark] = useState(false);
   const navigate = useNavigate();
   const { menuList } = useAppSelector((state) => state.menu);
   const selectedMenu = useAppSelector((state) => state.menu.selectedMenu);
+
+  const [rootOpenMenu, setRootOpenMenu] = useState<MenuType>();
+  const [secOpenMenu, setSecOpenMenu] = useState<MenuType>();
+
   const dispatch = useDispatch();
 
   /**
@@ -123,13 +126,15 @@ const AsideLayout = (props: AsideProps) => {
         {/*   side - right  */}
         <menu>
           <h1 className="logo">
-            로고영역
-            <a className="logo-icon">{/*로고아이콘*/}</a>
+            <a className="logo-icon">
+              {/*로고아이콘*/}
+              로고영역
+            </a>
           </h1>
           <div className="menu-top">{/*검색폼등*/}</div>
 
           {rootMenu.map((main) => {
-            //
+            //중메뉴조회
             const middleMenus = menuList.filter((e) => {
               return e.parentId === main.menuId;
             });
@@ -140,26 +145,46 @@ const AsideLayout = (props: AsideProps) => {
                   id={main.menuId}
                   key={main.menuId}
                   // className="aside__1depth-item close"
-                  className="aside__1depth-item open"
+                  className={`aside__1depth-item ${rootOpenMenu?.menuId === main.menuId ? 'open' : 'close'}`}
                 >
-                  <div className="icon-arrow">
+                  <div
+                    className="icon-arrow"
+                    onClick={() => {
+                      console.log('rootOpenMenu: ', rootOpenMenu);
+                      if (rootOpenMenu?.menuId === main.menuId) {
+                        setRootOpenMenu(null);
+                      } else {
+                        setRootOpenMenu(main);
+                      }
+                    }}
+                  >
                     {main.menuName}
                     <MenuArrIcon />
                   </div>
                   {/* 2.중메뉴1 */}
                   <ul key={'menu_second'} className="aside__2depth">
                     {middleMenus.map((middle) => {
-                      //
+                      //소메뉴조회
                       const lastMenus = menuList.filter((e) => e.parentId === middle.menuId);
 
                       return (
                         <li
                           id={middle.menuId}
                           key={middle.menuId}
-                          className="aside__2depth-item open"
+                          className={`aside__2depth-item ${secOpenMenu?.menuId === middle.menuId ? 'open' : 'close'}`}
                           // className="aside__2depth-item close"
                         >
-                          <div className="icon-arrow">
+                          <div
+                            className="icon-arrow"
+                            onClick={() => {
+                              // console.log('rootOpenMenu: ', secOpenMenu);
+                              if (secOpenMenu?.menuId === middle.menuId) {
+                                setSecOpenMenu(null);
+                              } else {
+                                setSecOpenMenu(middle);
+                              }
+                            }}
+                          >
                             {middle.menuName}
                             <MenuArrIcon />
                           </div>
