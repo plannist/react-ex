@@ -73,14 +73,9 @@ const AsideLayout = (props: AsideProps) => {
   };
 
   useEffect(() => {
+    // console.log('aside init menuList :: ', menuList);
     setRootMenu(menuList.filter((e: MenuType) => !e.parentId));
-  }, []);
-
-  useEffect(() => {
-    if (rootMenu && rootMenu.length > 0) {
-      console.log('rootMenu: ', rootMenu);
-    }
-  }, [rootMenu]);
+  }, [menuList]);
 
   return (
     <>
